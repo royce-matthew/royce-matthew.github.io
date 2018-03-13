@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style type="text/css">
+
+		body {
+			font-family: 'Roboto', sans-serif;
+
+						transition: ease-in-out 0.22s;
+		}
+		.demo
+		{
+
+						transition: ease-in-out 0.22s;
+		}
+		.header{
+			padding:20px;
+			background-color: #95a5a6;
+			color:#FFF;
+			min-width:100px;
+			height:60px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			font-size:1.1em;
+			margin:1px;
+			text-transform: uppercase;
+						transition: ease-in-out 0.22s;
+
+		}
+		.box
+		{
+			margin:2px;
+			padding:20px;
+			height: 50px;
+			transition: ease-in-out 0.22s;
+		}
+		.box-list
+		{
+
+		}
+		.price
+		{
+			background-color: #2980b9;
+			color:#FF0;
+			display: flex;
+			align-items: center;
+			font-size:1.8em;
+			justify-content: space-around;
+
+		}
+		.question
+		{
+			background-color: #27ae60;
+			color:#FFF;
+			padding:2px 10px;
+			height:84px;
+			font-size:1.2em;
+		}
+		.answer
+		{
+			background-color: #9b59b6;
+			color:#EEE;
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body onload="">
+
+
+<div id="demo" style="display:flex;">
+
+</div>
+
+<script>
+
+demo=document.getElementById("demo");
+bluesclues=[];
+function loadXMLDoc() {
+	return new Promise(function(resolve,reject){
+
+
+		  var xhttp = new XMLHttpRequest();
+
+		  xhttp.open("GET", "http://jservice.io/api/categories?count=5&offset=10");
+		  //XHTTP REQUEST TO GET CATEGORIES AND IDs
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		     categories=JSON.parse(this.responseText);
+
+		     categories.forEach(
+		     	function(cat){
+
+		     		// creates elements
+
+		     		var col = document.createElement('div');
+		     		col.classList.add("column");
+		     		col.id="category-"+cat.id;
+
+		     		//create a header box element
+		     		var head = document.createElement('div');
+		     		 head.classList.add("header");
+		     		 head.innerHTML=cat.title
+
+
+		     		 //create a boxlist
+		     		 var boxes=document.createElement('div');
+		     		 boxes.classList.add("box-list");
+		     		 boxes.id="category-"+cat.id+"-boxes";
+
+		     		 //append header into column
+		     		col.appendChild(head)
+
+		     		//append box list element into column
+		     		col.appendChild(boxes)
+
+		     		//append column into the demo div element
+		     		demo.appendChild(col);
+
+
+		     		//with the ID (cat.id) go to loadCluesFunction which returns a list of clues
+		     		loadClues(cat.id).then(function(f){
+		     			
+		     			//limit clues to first 5 only
+		     			f.clues=f.clues.slice(0,5)
+
+
+		     			f.clues.forEach(function(g)
+		     			{
+
+		     				//for every clue, g
+
+		     				var box = document.createElement("div");
+
+		     				//creates a box element
+
+		     				box.classList.add("box")
+		     				box.classList.add("price")
+		     				box.innerHTML=g.value;
+
+		     				//onclicks
+		     				box.onclick=function()
+		     					{
+		     						//Show Question
+		     					this.classList.add("question");
+		     					this.innerHTML=g.question;
+		     					this.onclick=
+		     					function()
+		     						{
+		     							//Shows Answers
+		     							this.classList.add("answer");
+		     							this.innerHTML=g.answer
+		     						}
+		     					}
+		     				//adds the box to the box list
+		     				document.getElementById("category-"+cat.id+"-boxes").appendChild(box);
+		     			}
+		     			)
+
+
+
+		     			});
+		     	})
+		     resolve(categories);
+
+
+		    }
+		  };
+
+		  xhttp.oneror = function()
+		  {
+		  	reject(["error"]);
+		  }
+		  xhttp.send();
+
+	})
+}
+function loadClues(cat_id) {
+	return new Promise(function(resolve,reject)
+	{
+		//make a promise </3
+
+		var xhttp = new XMLHttpRequest();
+			//request data with id cat_id
+		  xhttp.open("GET", "http://jservice.io/api/category?id="+cat_id);
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		     	resolve(JSON.parse(this.responseText));
+
+		    }
+		  };
+		  xhttp.oneror = function()
+		  {
+		  	reject(["error"]);
+		  }
+
+		  xhttp.send();
+
+	})
+  
+
+
+}
+
+
+//run function
+loadXMLDoc().then(function(f){})
+
+</script>
+
+</body>
+</html>
