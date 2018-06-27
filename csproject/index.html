@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		html
+		{
+			box-sizing: border-box;
+		}
+		* , *::before , *::after
+		{
+			box-sizing: inherit;
+		}
+		
+		body{
+			background: #000;
+			color:#fff;
+			font-family: Arial,Helvetica,sans-serif;
+		}
+		nav
+		{
+			background: #1b1b1b;
+			width: 100vw;
+			min-height: 100px;
+			display: flex;
+			padding: 10px 30px;
+		}
+		.nav-left
+		{
+			display: flex;
+			align-items: center;
+
+		}
+		.logo
+		{
+			font-size: 3em;
+			font-weight: 600;
+		}
+		.logo-box
+		{
+			color:#000;
+			background: #f90;
+			border-radius: 5px;
+			padding: 0px 3px;
+		}
+		.search-group
+		{
+
+		}
+		.search-bar
+		{
+			background-color: #363636;
+			border:none;
+			color:#cacaca;
+			padding:5px 2px;
+			margin:0px 0px 0px 20px;
+			height: 20px;
+		}
+		.search-button
+		{
+			height: 20px;
+			margin: 0px;
+			border-radius:0px;
+		}
+		.searchbar{
+			margin-left: 30px;
+		}
+
+			.searchbar input[type=text] {
+			  padding: 2px 4px;
+			  font-size: 1em;
+			  border: 1px solid grey;
+			  float: left;
+			  width: 80%;
+			  background: #363636;
+			  color: #cacaca
+			}
+
+			/* Style the submit button */
+			.searchbar button {
+			  float: left;
+			  width: 20%;
+			  padding: 2px 4px;
+			  background: #F90;
+			  color: #000;
+			  font-size: 1em;
+			  border: none;
+			  border-left: none; /* Prevent double borders */
+			  cursor: pointer;
+			}
+
+			form.searchbar {
+			  background: #F91;
+			}
+
+			/* Clear floats */
+			form.searchbar::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+			.orange-button
+			{
+				color:#000;
+				background: #F90;
+				border:0px;
+				padding: 3px 8px;
+				font-size:1em;
+				margin: 0px 10px
+			}
+			section
+			{
+				margin:20px 40px;
+			}
+			.review-box
+			{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+			}
+			.single-review
+			{
+				width: 270px;
+				height:270px;
+				margin: 10px;
+			}
+			.review-image
+			{
+				width: 250px;
+				height:160px;
+				margin: 5px auto;
+				background: #004e7e;
+
+			}
+			.caption-link
+			{
+				color:#f90;
+				font-size: 1.8em;
+				margin: 0px;
+				text-decoration: none;
+			}
+			.sub-caption
+			{
+				font-size: 1em;
+				color:#cacaca;
+				margin:0px;
+			}
+			.caption
+			{
+				margin:10px 0px;
+			}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="nav-left">
+			<span class="logo" >Movie<span class="logo-box">hub</span></span>
+			
+			<form class="searchbar" action="/action_page.php">
+  				<input type="text" placeholder="Search.." name="search">
+ 			 <button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+			<button class="orange-button"><i class="fa fa-arrow-up"></i> &nbsp;Upload</button>
+			<button class="orange-button"><i class="fa fa-star"></i> &nbsp;Upgrade</button>
+		</div>
+		<div></div>
+	</nav>
+	<h2 style="color:#cacaca; font-size:1em; font-weight: 200; margin-left: 40px">A CS 179.1 Project by Royce Matthew Chan and David Chua</h2>
+	<section>
+		<h2>Hot Reviews Internationally</h2>
+
+		<div class="review-box">
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">How I met Your Mother</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">West World</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">Jurassic World</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">Dont Trust The B</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">Avatar the Last Airbender</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">Rick and Morty</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">How I met Your Mother</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+			<div class="single-review">
+				<div class="review-image"></div>
+				<h5 class="caption"><a href="#" class="caption-link">How I met Your Mother</a></h5>
+				<p class="sub-caption">100 views <i class="fa fa-thumbs-up"></i>80%</p>
+				
+			</div>
+
+		</div>
+
+
+	</section>
+
+</body>
+</html>
