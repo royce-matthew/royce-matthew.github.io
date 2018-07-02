@@ -1,0 +1,620 @@
+html
+{
+box-sizing: border-box;
+}
+* , *::before , *::after
+{
+	transition: ease-out 0.1s;
+box-sizing: inherit;
+}
+
+body{
+background: #000;
+color:#fff;
+font-family: Arial,Helvetica,sans-serif;
+padding: 0px;
+margin: 0px;
+}
+nav
+{
+background: #1b1b1b;
+width: 100vw;
+min-height: 100px;
+display: flex;
+justify-content: space-between;
+padding: 10px 30px;
+}
+.nav-left
+{
+display: flex;
+align-items: center;
+
+}
+.nav-right
+{
+display: flex;
+align-items: center;
+
+}
+.logo
+{
+font-size: 3em;
+font-weight: 600;
+text-decoration: none;
+color:white;
+}
+.logo:hover
+{
+	font-size: 3.2em;
+}
+.logo-box
+{
+color:#000;
+background: #f90;
+border-radius: 5px;
+padding: 0px 3px;
+}
+.search-group
+{
+
+}
+.search-bar
+{
+background-color: #363636;
+border:none;
+color:#cacaca;
+padding:5px 2px;
+margin:0px 0px 0px 20px;
+height: 20px;
+}
+.search-button
+{
+height: 20px;
+margin: 0px;
+border-radius:0px;
+}
+.searchbar{
+margin-left: 30px;
+}
+
+.searchbar input[type=text] {
+  padding: 2px 4px;
+  font-size: 1em;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #363636;
+  color: #cacaca
+}
+
+/* Style the submit button */
+.searchbar button {
+  float: left;
+  width: 20%;
+  padding: 2px 4px;
+  background: #F90;
+  color: #000;
+  font-size: 1em;
+  border: none;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.searchbar {
+  background: #F91;
+}
+
+/* Clear floats */
+form.searchbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.orange-button
+{
+	color:#000;
+	background: #F90;
+	border:0px;
+	padding: 3px 8px;
+	font-size:1em;
+	margin: 0px 10px;
+	text-decoration: none;
+}
+.wrapper
+{
+	display: flex;
+}
+section
+{
+	margin:20px 40px;
+}
+.review-box
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 900px;
+
+}
+.single-review
+{
+	width: 270px;
+	height:270px;
+	margin: 10px;
+	transition: ease-out 0.12s;
+}
+.single-review:hover
+{
+	position: relative;
+	-webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
+    filter: blur(1px);
+}
+.single-review:hover::after
+{
+	content: "";
+	position: absolute;
+	top:-5px;
+	left: -5px;
+	height: 280px;
+	width: 280px;
+	background: rgba(0,0,0,0.2);
+	pointer-events: none;
+	
+}
+.review-image
+{
+	width: 250px;
+	height:160px;
+	margin: 5px auto;
+	background: #004e7e;
+
+}
+.caption-link
+{
+	color:#f90;
+	font-size: 1.8em;
+	margin: 0px;
+	text-decoration: none;
+}
+.sub-caption
+{
+	font-size: 1em;
+	color:#cacaca;
+	margin:0px;
+}
+.caption
+{
+	margin:10px 0px;
+}
+.green
+{
+	color: #0ca678;
+}
+.prof-pic
+{
+	width:64px;
+	height: 64px;
+	border-radius: 50%;
+	background:#004e7e;
+}
+.review-indiv
+{
+
+	color:#b8b8b8;
+	background: #101010;
+
+	margin: 20px 10vw;
+	padding: 10px 20px;
+
+}
+.banner
+{
+	height: 400px;
+	width:100%;
+}
+.review-main
+{
+
+	color:#ddd;
+	background: #101010;
+
+	margin: 20px 10vw;
+	padding: 10px 20px 50px;
+
+}
+.review-main p
+{
+	margin: 4px 0px;
+	clear:both;
+}
+.review-main h4
+{
+	font-size: 1.2em;
+	margin-bottom:0px; 
+}
+.review-main h2
+{
+	font-size: 2em;
+}
+.summary
+{
+	margin-top:20px;
+}
+.review-main a
+{
+	color:#ddd;
+	background: #f90;
+	padding:2px 4px;
+	border-radius: 8px;
+	text-decoration: none;
+	color:black;
+	margin:0px 2px;
+}
+.review-main a:hover
+{
+	font-size: 1.1em;
+	margin: 0px 8px;
+}
+.review-main ul
+{
+
+    list-style-type: none;
+    margin: 8px 0px 0px;
+    padding: 0;
+}
+.review-main li
+{
+	float: left
+}
+
+
+
+
+.himym-main
+{
+	background: url(../images/himym-2.jpg);
+	background-size: cover;
+}
+.inception-main
+{
+	background: url(../images/inception-2.jpg);
+	background-size: cover;
+}
+.thebigshort-main
+{
+	background: url(../images/thebigshort-2.jpg);
+	background-size: cover;
+}
+
+
+
+
+
+
+.review-box
+{
+
+}
+.review-head
+{
+	display: flex;
+	width: 250px;
+	align-items:center;
+	margin-left: 0px;
+	margin-right: auto;
+}
+.prof-description
+{
+	margin-left:20px;
+}
+.prof-name
+{
+	font-size: 1.5em;
+	color:#f90;
+	font-weight: 900;
+}
+.prof-subhead
+{
+	font-size: 0.9em;
+
+}
+.input-bar
+{
+	margin-top:5px;
+	width:100%;
+}
+.action-button
+{
+	font-size: 1.1em;
+	padding: 3px 10px;
+	background: #f90;
+	color:#000;
+	border:none;
+}
+.footer
+{
+	padding:0px 10px 20px;
+}
+.score
+{
+	font-size: 1.2em;
+	padding: 1px 3px; 
+	margin: 4px;
+	background: #f90;
+	color: #000;
+}
+.summary
+{
+	clear:both;
+}
+
+
+
+
+.himym
+{
+	background: url(../images/himym-1.jpg);
+	background-size: cover;
+}
+
+.inception
+{
+	background: url(../images/inception-1.jpg);
+	background-size: cover;
+}
+
+.thebigshort
+{
+	background: url(../images/thebigshort-1.jpg);
+	background-size: cover;
+}
+.saw
+{
+background: url(../images/saw.jpg);
+	background-size: cover;
+}
+.lad
+{
+
+background: url(../images/lad.jpg);
+	background-size: cover;
+
+}
+.tcm
+{
+
+background: url(../images/tcm.jpg);
+	background-size: cover;
+}
+
+
+
+
+
+.ad-space
+{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.ad
+{
+	background: url(../images/bg-1.jpeg);
+	height: 450px;
+	width: 300px;
+	padding: 30px;
+	background-size: cover;
+	background-position: 50px;
+}
+.ad>p
+{
+	text-align: center;
+	font-size: 1.3em;
+	background: rgba(0,0,0,0.4);
+	padding: 30px 10px 60px;
+}
+.ad button
+{
+	margin-top: 25px;
+}
+
+
+.dp1
+{
+	background: url(../images/dp1.jpg);
+	background-size: cover;
+}
+.dp2
+{
+	background: url(../images/dp2.jpg);
+	background-size: cover;
+}
+
+.dp3
+{
+	background: url(../images/dp3.jpg);
+	background-size: cover;
+}
+
+.dp4
+{
+	background: url(../images/dp4.jpg);
+	background-size: cover;
+}
+
+.dp5
+{
+	background: url(../images/dp5.jpg);
+	background-size: cover;
+}
+.dp6
+{
+	background: url(../images/dp6.jpg);
+	background-size: cover;
+}
+.dp7
+{
+	background: url(../images/dp7.jpg);
+	background-size: cover;
+}
+.dp8
+{
+	background: url(../images/dp8.jpg);
+	background-size: cover;
+}
+.dp9
+{
+	background: url(../images/dp9.jpg);
+	background-size: cover;
+}
+.dp10
+{
+	background: url(../images/dp10.jpg);
+	background-size: cover;
+}
+
+.signup-jumbotron
+{
+	display: flex;
+	padding: 10px 150px;
+
+}
+.signup-jumbotron h3
+{
+
+	font-size: 5em;
+}
+
+.logo-static
+{
+font-size: 1em;
+font-weight: 600;
+text-decoration: none;
+color:white;
+}
+
+.free-button, .upgrade-button
+{
+	margin: 20px;
+	width: 380px;
+	height: 80px;
+	border:solid white 1px;
+	padding: auto;
+	font-size:1.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color:white;
+	border:none;
+}
+.free-button:hover, .upgrade-button:hover
+{
+	cursor: pointer;
+	font-size: 1.9em;
+
+	width: 385px;
+	height: 85px;
+}
+.free-button
+{
+	background: #636363;
+}
+.free-button:hover
+{
+	background: #777;
+}
+.upgrade-button
+{
+	color:black;
+	background-color: #f90;
+}
+.upgrade-button:hover
+{
+	background-color:#E80; 
+}
+
+
+footer
+{
+	width: 100%;
+	height: 20vh;
+}
+.signup-form
+{
+	display: flex;
+	flex-direction: column;
+	padding: 0px 40px 20px;
+	margin: auto;
+	background-color: rgba(0,0,0,0.4)
+}
+.signup-form input
+{
+	font-size: 2em;
+	margin: 20px;
+	padding: 6px 8px 3px;
+}
+.signup-head
+{
+	font-size: 3em;
+	margin-top:30px;
+	margin-bottom: 0px;
+}
+.subhead
+{
+	margin: 4px 0px;
+	color:#cacaca;
+	font-weight: 300;
+}
+.ch-bg
+{
+	background-image: url(../images/ch.jpeg);
+	background-size: cover;
+}
+
+.sad-bg
+{
+	background-image: url(../images/sad-1.jpg);
+	background-size: cover;
+	height: 90vh;
+}
+.deal-bg
+{
+background-image: url(../images/deal.jpg);
+	background-size: cover;	
+	height: 90vh;
+}
+.jumbo-text
+{
+	background-color:rgba(0,0,0,0.35) ;
+	 padding:40px;
+}
+
+.jumbo-text-dark
+{
+	background-color:rgba(0,0,0,0.8) ;
+	 padding:40px;
+}
+@media only screen and (max-width:769px)
+{
+		body
+	{
+	}	
+	nav
+	{
+		flex-direction: column;
+		margin:0px;
+	}
+	.nav-left
+	{
+		flex-direction: column;
+	}
+	.nav-right
+	{
+		flex-direction: column;
+	}
+}
+
